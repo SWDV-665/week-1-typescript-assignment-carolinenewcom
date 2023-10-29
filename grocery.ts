@@ -19,11 +19,4 @@ let grocery_list = [
     new Grocery('Soap', 12, 9.49),
     new Grocery('Coffee', 2, 13.98),
     new Grocery('Batteries', 1, 17.87)
-]
-
-const elem = document.getElementById('list');
-grocery_list.forEach(product => {
-    const p = document.createElement("p");
-    p.textContent = `${product.name} (${product.quantity}) $${product.total}`;
-    elem.appendChild(p);
-});
+];
