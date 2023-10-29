@@ -7,7 +7,15 @@
     </head>
     <body>
         <h1>Groceries</h1>
-        <div id='list'></div>
+        <ul id='list'></ul>
         <script src="grocery.js"></script>
+        <script>
+            const elem = document.getElementById('list');
+            grocery_list.forEach(product => {
+                const p = document.createElement("p");
+                p.textContent = `${product.name} (${product.quantity}) $${product.total}`;
+                elem.appendChild(p);
+            });
+        </script>
     </body>
 </html>
